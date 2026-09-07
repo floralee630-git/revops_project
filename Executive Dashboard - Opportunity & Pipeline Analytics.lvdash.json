@@ -24,15 +24,15 @@
     },
     {
       "name": "3dca892d",
-      "displayName": "Pipeline by sales rep",
+      "displayName": "Closed Won by sales rep",
       "queryLines": [
-        "SELECT\n",
-        "    sales_agent,\n",
-        "    COUNT(*) AS opportunity_count,\n",
-        "    SUM(close_value) AS amount\n",
-        "FROM flora_workspace.default.sales_pipeline\n",
+        "SELECT sales_agent,\n",
+        "       COUNT(*) AS won_opportunities,       \n",
+        "       CONCAT('$', FORMAT_NUMBER(SUM(close_value), 0)) AS amount\n",
+        "       FROM flora_workspace.default.sales_pipeline\n",
+        "WHERE deal_stage = 'Won'\n",
         "GROUP BY sales_agent\n",
-        "ORDER BY amount DESC;"
+        "ORDER BY SUM(close_value) DESC\n"
       ]
     },
     {
