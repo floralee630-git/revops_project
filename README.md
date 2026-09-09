@@ -10,6 +10,23 @@ SQL queries and outputs are sit within the notebooks folder
     STRATEGY       OPERATIONS       DATA
        │              │              │
      ICP          CRM Ops          SQL
+Segmentation    Routing          Python
+   Territory      SLA             Databricks
+   Planning       Processes        BI
+       │              │              │
+       └──────────────┼──────────────┘
+                      │
+                  SYSTEMS
+                      │
+             Salesforce / HubSpot
+                      │
+                  AUTOMATION
+                      │
+              n8n / Make / APIs
+                      │
+                     AI
+                      │
+              Agents / MCP / LLM
   Segmentation    Routing          Python
    Territory      SLA             Databricks
    Planning       Processes        BI
